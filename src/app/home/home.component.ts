@@ -17,7 +17,8 @@ import { HousingLocationComponent } from '../housing-location/housing-location.c
     </form>
   </section>
   <section class="results">
-      <app-housing-location *ngFor="let housingLocation of filteredLocationList" [housingLocation]="housingLocation">
+      <app-housing-location *ngFor="let housingLocation of filteredLocationList" [housingLocationInput]="housingLocation"
+      (itemCountEvent)="itemCountIncrease($event)">
       </app-housing-location>
     </section>
   `,
@@ -41,5 +42,13 @@ export class HomeComponent {
     this.filteredLocationList = this.housingLocationList.filter(
       housingLocation => housingLocation?.city.toLowerCase().includes(text.toLocaleLowerCase())
     )
+  }
+
+  items = new Array();
+
+  itemCountIncrease(item: number) {
+    console.log(`Item count increased: ${item}`);
+    this.items.push(item);
+    console.log(`Current items: ${this.items}`);
   }
 }
