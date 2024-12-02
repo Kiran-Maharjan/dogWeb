@@ -1,6 +1,9 @@
 import { Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { DetailsComponent } from './details/details.component';
+import { TutorialComponent } from './tutorial/tutorial.component';
+import { UserComponent } from './user/user.component';
+import { DogComponent } from './dog/dog.component';
 export const routes: Routes = [];
 const routeConfig: Routes = [
     {
@@ -11,12 +14,26 @@ const routeConfig: Routes = [
      {
         path: 'details',
         component: DetailsComponent,
-        title: 'Details Page'
+        title: 'Home Details Page'
     }
     , {
         path: 'details/:id',
         component: DetailsComponent,
-        title: 'Details Page'
+        title: 'Home Details Page'
+    },
+    {
+        path: 'user',
+        component: UserComponent,
+        title: 'User Page'
+    }, {
+        path: 'tutorial',
+        component: TutorialComponent,
+        title: 'Tutorial Page'
+    }, {
+        path: 'dog',
+        component: DogComponent,
+        title: 'Dog Page'
     }
+
 ]
 export default routeConfig;
