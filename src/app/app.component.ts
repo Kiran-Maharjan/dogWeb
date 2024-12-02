@@ -1,17 +1,12 @@
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { HomeComponent } from './home/home.component';
-import { TutorialComponent } from "./tutorial/tutorial.component";
-import { UserComponent } from "./user/user.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [HomeComponent, RouterModule, TutorialComponent, UserComponent],
+  imports: [ RouterModule],
   // templateUrl: './app.component.html',
   template: `
-   <!-- <app-user/> -->
-  <!-- <app-tutorial/> -->
   <main>
     <a [routerLink]="['/']">
       <header class="brand-name">
@@ -26,7 +21,7 @@ import { UserComponent } from "./user/user.component";
       |
       <a href="/user">Users</a>
       |
-      <a href="/tutorial">Tutorial</a>
+      <a href="/guide">Guide</a>
     </nav>
       </section>
       <router-outlet></router-outlet>

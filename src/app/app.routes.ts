@@ -1,7 +1,7 @@
 import { Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { DetailsComponent } from './details/details.component';
-import { TutorialComponent } from './tutorial/tutorial.component';
+import { GuideComponent } from './guide/guide.component';
 import { UserComponent } from './user/user.component';
 import { DogComponent } from './dog/dog.component';
 export const routes: Routes = [];
@@ -26,9 +26,9 @@ const routeConfig: Routes = [
         component: UserComponent,
         title: 'User Page'
     }, {
-        path: 'tutorial',
-        component: TutorialComponent,
-        title: 'Tutorial Page'
+        path: 'guide',
+        component: GuideComponent,
+        title: 'Guide Page'
     }, {
         path: 'dog',
         component: DogComponent,
