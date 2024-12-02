@@ -1,0 +1,42 @@
+<div>
+    <label for="framework">
+      Enter your favorite dog spieces:
+      <input id="framework" type="text" [(ngModel)]="favoriteDogSpieces">
+    </label>
+    I love dog spieces of {{favoriteDogSpieces}}
+  </div>
+  
+
+<section id="dogs">
+    <h2>Adorable Dogs</h2>
+    <div class="dog-gallery">
+        <div>
+            <label>dog 1</label>
+            <img src="https://images.pexels.com/photos/1108099/pexels-photo-1108099.jpeg?auto=compress&cs=tinysrgb&w=200"
+                alt="Dog 1">
+                <button type="button" class="btn btn-primary" (click)="addToCart('dog1')">Add to Cart</button>
+        </div>
+        <div>
+            <label>dog 2</label>
+
+            <img src="https://images.pexels.com/photos/1108099/pexels-photo-1108099.jpeg?auto=compress&cs=tinysrgb&w=200"
+                alt="Dog 2">
+                <button type="button" class="btn btn-primary" (click)="addToCart('dog2')">Add to Cart</button>
+        </div>
+        <div>
+            <label>dog 3</label>
+
+            <img src="https://images.pexels.com/photos/1108099/pexels-photo-1108099.jpeg?auto=compress&cs=tinysrgb&w=200"
+                alt="Dog 3">
+                <button type="button" class="btn btn-primary" (click)="addToCart('dog3')">Add to Cart</button>
+        </div>
+    </div>
+</section>
+<section>
+    <h2>Cart</h2>
+    <ul>
+        <li *ngFor="let dog of cart">{{dog}}</li>
+    </ul>
+    <p>Total: {{totalCost}}</p>
+    <button type="button" class="btn btn-primary" (click)="checkout()">Checkout</button>
+</section>
