@@ -1,6 +1,6 @@
 import { NgOptimizedImage } from '@angular/common';
 import { Component } from '@angular/core';
-import { FormControl, FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 
 
 @Component({
@@ -41,8 +41,8 @@ export class UserComponent {
   home_url_desc = "this is the description";
 
   profileForm = new FormGroup({
-    name: new FormControl(''),
-    email: new FormControl(''),
+    name: new FormControl('',Validators.required),
+    email: new FormControl('',[Validators.email,Validators.required]),
   });
 
 
