@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component,inject } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { DogBreedsService } from '../dog-breeds.service';
 
 @Component({
   selector: 'app-dog',
@@ -31,4 +32,8 @@ export class DogComponent {
   checkout(){
     alert('Checkout successful');
   }
+
+
+  dogBreedsService = inject(DogBreedsService);
+
 }
