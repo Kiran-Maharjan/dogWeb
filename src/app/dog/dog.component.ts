@@ -19,7 +19,7 @@ export class DogComponent {
   currency:String = "USD";
   display:String="";
 
-  constructor(){
+  constructor(private dogBreedsService:DogBreedsService){
     this.display = this.dogBreedsService.breeds.join("⭐️");;
   }
   addToCart(item:String):void{
@@ -37,7 +37,5 @@ export class DogComponent {
     alert('Checkout successful');
   }
 
-
-  dogBreedsService = inject(DogBreedsService);
 
 }
