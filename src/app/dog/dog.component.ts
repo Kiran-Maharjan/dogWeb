@@ -17,7 +17,11 @@ export class DogComponent {
   cart: String[] = [];
   totalCost: number = 0;
   currency:String = "USD";
+  display:String="";
 
+  constructor(){
+    this.display = this.dogBreedsService.breeds.join("⭐️");;
+  }
   addToCart(item:String):void{
     console.log('Adding to cart:', this.favoriteDogSpieces);
     // Add logic to save the favorite dog spieces to the cart
