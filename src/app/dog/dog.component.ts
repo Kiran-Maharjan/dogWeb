@@ -19,7 +19,9 @@ export class DogComponent {
   currency:string = "USD";
   dogBreeds:string="";
   saleBanner:string="Sale Sale Sale";
-
+  date=new Date();
+  age:number =4;
+  cost:number=15343.343;
   constructor(private dogBreedsService:DogBreedsService){
     this.dogBreeds = this.dogBreedsService.breeds.join("⭐️");;
   }

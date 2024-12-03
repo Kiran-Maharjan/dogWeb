@@ -15,23 +15,42 @@
     <div class="dog-gallery">
         <div>
             <label>dog 1</label>
+            <p>Name: Jack</p>
+            <p>Birth date: {{date|date:'medium'}}</p>
+            <p>Age:{{ age }}</p>
+            <p>Cost with "currency" {{ cost | currency }}</p>
+
             <img src="https://images.pexels.com/photos/1108099/pexels-photo-1108099.jpeg?auto=compress&cs=tinysrgb&w=200"
                 alt="Dog 1">
+                <p>
                 <button type="button" class="btn btn-primary" (click)="addToCart('dog1')">Add to Cart</button>
+                </p>
         </div>
         <div>
             <label>dog 2</label>
+            <p>Name: Mike</p>
+            <p>Birth date: {{date|date:'medium'}}</p>
+            <p>Age:{{ age }}</p>
+            <p>Cost with "currency" {{ cost | currency }}</p>
 
             <img src="https://images.pexels.com/photos/1108099/pexels-photo-1108099.jpeg?auto=compress&cs=tinysrgb&w=200"
                 alt="Dog 2">
+                <p>
                 <button type="button" class="btn btn-primary" (click)="addToCart('dog2')">Add to Cart</button>
+                </p>
         </div>
         <div>
             <label>dog 3</label>
+            <p>Name: Young</p>
+            <p>Birth date: {{date|date:'medium'}}</p>
+            <p>Age:{{ age  }}</p>
+            <p>Cost with "currency" {{ cost | currency }}</p>
 
             <img src="https://images.pexels.com/photos/1108099/pexels-photo-1108099.jpeg?auto=compress&cs=tinysrgb&w=200"
                 alt="Dog 3">
+                <p>
                 <button type="button" class="btn btn-primary" (click)="addToCart('dog3')">Add to Cart</button>
+                </p>
         </div>
     </div>
 </section>
